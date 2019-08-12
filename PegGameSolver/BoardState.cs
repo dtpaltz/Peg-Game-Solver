@@ -38,7 +38,7 @@ namespace PegGameSolver
 
 		public void PrintSolution()
 		{
-			Console.WriteLine("------------------------------");
+			Console.WriteLine("--------------------------------");
 
 			foreach (var move in m_moves)
 			{

@@ -1,16 +1,11 @@
-﻿using PegGameSolver;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI;
 
 namespace PegGameSolver
 {
 	public static class BoardUtils
 	{
-
 		private static readonly List<Move> JumpDictionary = new List<Move>
 		{
 			new Move(0, 1, 3),
@@ -32,10 +27,6 @@ namespace PegGameSolver
 			new Move(11, 12, 13),
 			new Move(12, 13, 14)
 		};
-
-
-
-
 
 		public static List<Move> GetMovesEndingAt(int index)
 		{
@@ -71,12 +62,6 @@ namespace PegGameSolver
 			return board;
 		}
 
-
-
-
-
-
-
 		public static List<int> GetOpenSlots(int[] board)
 		{
 			List<int> openSlots = new List<int>();
@@ -92,21 +77,10 @@ namespace PegGameSolver
 			return openSlots;
 		}
 
-
-
-
-
-
-
-
-
 		public static bool IsBoardSolved(int[] board)
 		{
 			return board.Sum() == 1;
 		}
-
-
-
 
 		public static BoardState PerformMove(int[] board, Move move)
 		{
@@ -118,9 +92,6 @@ namespace PegGameSolver
 
 			return new BoardState(boardCopy, move);
 		}
-
-
-
 
 		public static List<Move> GenerateNextMoves(int[] board)
 		{
@@ -142,7 +113,6 @@ namespace PegGameSolver
 			return validNextMoves;
 		}
 
-
 		public static List<BoardState> GenerateNextStates(BoardState currentState)
 		{
 			List<BoardState> nextStates = new List<BoardState>();
@@ -156,7 +126,5 @@ namespace PegGameSolver
 
 			return nextStates;
 		}
-
-
 	}
 }

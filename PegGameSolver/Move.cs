@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PegGameSolver
+﻿namespace PegGameSolver
 {
 	public class Move
 	{

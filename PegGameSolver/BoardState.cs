@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace PegGameSolver
 {
 	public class BoardState
 	{
 		private int[] m_BoardState;
-
 
 		public int[] Board
 		{
@@ -17,17 +15,13 @@ namespace PegGameSolver
 			}
 		}
 
-
-
 		private List<Move> m_moves;
-
 
 		public BoardState(int[] boardState, Move previousMove)
 		{
 			m_BoardState = boardState;
 			m_moves = new List<Move>() { previousMove };
 		}
-
 
 		public void AppendMoves(BoardState previouState)
 		{
@@ -37,14 +31,10 @@ namespace PegGameSolver
 			}
 		}
 
-
 		public bool IsValidSolution()
 		{
 			return BoardUtils.IsBoardSolved(m_BoardState);
 		}
-
-
-
 
 		public void PrintSolution()
 		{
@@ -60,7 +50,5 @@ namespace PegGameSolver
 
 			Console.WriteLine("Moves: " + m_moves.Count);
 		}
-
-
 	}
 }

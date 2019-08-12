@@ -31,9 +31,6 @@ namespace PegGameSolver
 
 				List<BoardState> newStates = BoardUtils.GenerateNextStates(currentState);
 
-
-
-
 				foreach (var state in newStates)
 				{
 					string hash = string.Join(",", state.Board.Select(x => x.ToString()).ToArray());
